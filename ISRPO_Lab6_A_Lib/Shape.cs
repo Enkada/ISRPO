@@ -25,7 +25,7 @@ namespace ISRPO_Lab6_A_Lib
 
         public void Show()
         {
-            Console.WriteLine($"Фигура \"{Name}\": S = {Area}, P = {Perimeter}");
+            Console.WriteLine($"Фигура \"{Name}\": S = {Area}, P = {Perimeter}\n");
         }
     }
 
@@ -44,6 +44,8 @@ namespace ISRPO_Lab6_A_Lib
             this.a = a;
             this.b = b;
             Name = "прямоугольник";
+            CalculateArea();
+            CalculatePerimeter();
         }
 
         public void CalculateArea()
@@ -71,6 +73,8 @@ namespace ISRPO_Lab6_A_Lib
             this.a = a;
             this.b = a;
             Name = "квадрат";
+            CalculateArea();
+            CalculatePerimeter();
         }
     }
 
@@ -83,6 +87,14 @@ namespace ISRPO_Lab6_A_Lib
             Area = 0;
             Perimeter = 0;
             Name = "круг";
+        }
+
+        public Circle(double r)
+        {
+            this.r = r;
+            Name = "круг";
+            CalculateArea();
+            CalculatePerimeter();
         }
 
         public void CalculateArea()
