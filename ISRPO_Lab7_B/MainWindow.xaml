@@ -1,0 +1,85 @@
+﻿<Window x:Class="ISRPO_Lab7_B.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISRPO_Lab7_B"
+        mc:Ignorable="d" MouseMove="Window_MouseMove"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="16 8"/>
+            <Setter Property="Margin" Value="0 0 8 0"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DockPanel x:Name="dockPanel" Margin="0 0 0 10">
+            <Polygon x:Name="polygon" MouseDown="Polygon_MouseDown" Points="0,0 110,20 100,70  20,125" Width="114" Height="130" Stroke="#FF8D3535" StrokeThickness="4"  DockPanel.Dock="Bottom">
+                <Polygon.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform/>
+                        <ScaleTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Polygon.RenderTransform>
+                <Polygon.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="red" Offset="1"/>
+                        <GradientStop Color="blue" Offset="0"/>
+                    </LinearGradientBrush>
+                </Polygon.Fill>
+            </Polygon>
+            <Rectangle x:Name="rectangle" Width="100" Height="80" MouseDown="Rectangle_MouseDown" Stroke="CadetBlue" StrokeThickness="4"  DockPanel.Dock="Top">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform/>
+                        <ScaleTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <VisualBrush Visual="{Binding ElementName=btnRotate}" Stretch="Uniform"></VisualBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Ellipse x:Name="ellipse" Width="100" Height="80" MouseDown="Ellipse_MouseDown" Stroke="#FF358F35" StrokeThickness="4"  DockPanel.Dock="Left">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform/>
+                        <ScaleTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="dog.png" Stretch="Uniform"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Line x:Name="line" X1="0" Y1="0" X2="80" Y2="80" MouseDown="Line_MouseDown" Width="84" Height="84" Stroke="#FF7E4593" StrokeThickness="8" DockPanel.Dock="Right">
+                <Line.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform/>
+                        <ScaleTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Line.RenderTransform>
+            </Line>
+            <Image x:Name="image" MouseDown="Image_MouseDown" Width="100" Height="100" Source="cat.png">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform/>
+                        <ScaleTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </DockPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="btnRotate" PreviewMouseDown="BtnRotate_PreviewMouseDown" PreviewMouseMove="Window_MouseMove" PreviewMouseUp="Btn_PreviewMouseUp">⭯ Поворот ⭮</Button>
+            <Button x:Name="btnScale" PreviewMouseDown="BtnScale_PreviewMouseDown" PreviewMouseMove="Window_MouseMove" PreviewMouseUp="Btn_PreviewMouseUp">- Размер +</Button>
+            <Button x:Name="btnTranslate" PreviewMouseDown="BtnTranslate_PreviewMouseDown" PreviewMouseMove="Window_MouseMove" PreviewMouseUp="Btn_PreviewMouseUp"  Margin="0">Перемещение ✥</Button>
+        </StackPanel>
+    </Grid>
+</Window>
