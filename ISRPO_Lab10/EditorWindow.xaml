@@ -1,0 +1,23 @@
+﻿<Window x:Class="ISRPO_Lab10.EditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISRPO_Lab10"
+        mc:Ignorable="d"
+        Title="Редактор" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ToolBar>
+            <Button x:Name="btnCreate" Click="BtnCreate_Click" Margin="8 0">Создать</Button>
+            <Button x:Name="btnOpen" Click="BtnOpen_Click" Margin="8 0">Открыть</Button>
+            <Button x:Name="btnSave" Click="BtnSave_Click" Margin="8 0" IsEnabled="False">Сохранить</Button>
+            <Button x:Name="btnSaveAs" Click="BtnSaveAs_Click" Margin="8 0" IsEnabled="False">Сохранить как</Button>
+            <Button x:Name="btnZip" Click="BtnZip_Click" Margin="8 0" IsEnabled="False">Архивировать</Button>
+        </ToolBar>
+        <TextBox Grid.Row="1" Padding="4" x:Name="tbEditor" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
+    </Grid>
+</Window>
