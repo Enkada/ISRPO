@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28307.1972
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISRPO_Lab10", "ISRPO_Lab10\ISRPO_Lab10.csproj", "{E1892643-866A-4495-8133-4F3CC0E17909}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISRPO_Lab10_C", "ISRPO_Lab10_C\ISRPO_Lab10_C.csproj", "{285EAA10-D272-40AD-8173-43D6F5527832}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{E1892643-866A-4495-8133-4F3CC0E17909}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1892643-866A-4495-8133-4F3CC0E17909}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1892643-866A-4495-8133-4F3CC0E17909}.Release|Any CPU.Build.0 = Release|Any CPU
-		{285EAA10-D272-40AD-8173-43D6F5527832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{285EAA10-D272-40AD-8173-43D6F5527832}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{285EAA10-D272-40AD-8173-43D6F5527832}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{285EAA10-D272-40AD-8173-43D6F5527832}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
